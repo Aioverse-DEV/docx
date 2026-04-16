@@ -4,7 +4,7 @@ This repository contains the GitHub App manifest for the Aioverse-DEV organizati
 
 ## About
 
-The OAuth App defined in `.github/app-manifest.yml` provides secure authentication and authorization for accessing the docx repository resources.
+The OAuth App defined in `.github/app-manifest.yml` (and `.github/app-manifest.json`) provides secure authentication and authorization for accessing the docx repository resources.
 
 ## Installation
 
@@ -15,10 +15,11 @@ To install this OAuth App for the organization:
    - Click "New GitHub App"
    - Fill in the details based on the manifest in `.github/app-manifest.yml`
 
-2. **Using the Manifest:**
-   - Convert the YAML manifest to JSON format
-   - Use GitHub's manifest-based installation flow
-   - URL format: `https://github.com/organizations/Aioverse-DEV/settings/apps/new`
+2. **Using the Manifest (Recommended):**
+   - The manifest is available in both YAML (`.github/app-manifest.yml`) and JSON (`.github/app-manifest.json`) formats
+   - Use the JSON manifest with GitHub's manifest-based installation flow
+   - Navigate to: `https://github.com/organizations/Aioverse-DEV/settings/apps/new`
+   - Or use the GitHub API to create the app from the manifest
 
 ## Permissions
 
@@ -34,7 +35,11 @@ The app subscribes to:
 
 ## Configuration
 
-The manifest file is located at `.github/app-manifest.yml`. Modify it to adjust:
+The manifest files are located at:
+- `.github/app-manifest.yml` (YAML format - human-readable)
+- `.github/app-manifest.json` (JSON format - ready for API use)
+
+Modify them to adjust:
 - App name and description
 - Permissions and scopes
 - Event subscriptions

@@ -1,0 +1,14 @@
+{
+  "name": "Docx OAuth App",
+  "url": "https://github.com/Aioverse-DEV/docx",
+  "description": "OAuth App for Aioverse-DEV organization to manage docx repository access and authentication. This app provides secure access to repository resources for authorized users and applications.",
+  "public": false,
+  "default_permissions": {
+    "contents": "read",
+    "metadata": "read"
+  },
+  "default_events": [
+    "push",
+    "pull_request"
+  ]
+}

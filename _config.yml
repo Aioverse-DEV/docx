@@ -1,0 +1,76 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that.
+
+title: Aioverse Documentation
+email: contact@aioverse.dev
+description: >- # this means to ignore newlines until "baseurl:"
+  A comprehensive collection of blogs, knowledge base articles, notes, 
+  wiki pages, and library documentation for the Aioverse project.
+baseurl: "/docx" # the subpath of your site, e.g. /blog
+url: "https://aioverse-dev.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  blogs:
+    output: true
+    permalink: /blogs/:path/
+  kb:
+    output: true
+    permalink: /kb/:path/
+  notes:
+    output: true
+    permalink: /notes/:path/
+  wiki:
+    output: true
+    permalink: /wiki/:path/
+  library:
+    output: true
+    permalink: /library/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "blogs"
+    values:
+      layout: "post"
+      author: "Aioverse Team"
+  - scope:
+      path: ""
+      type: "kb"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "wiki"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "library"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

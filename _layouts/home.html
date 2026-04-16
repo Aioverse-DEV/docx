@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="home">
+  {{ content }}
+  
+  {% if site.collections.blogs %}
+  <h2>Recent Blog Posts</h2>
+  <ul class="post-list">
+    {% assign sorted_blogs = site.blogs | sort: 'date' | reverse %}
+    {% for post in sorted_blogs limit:5 %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h3>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        {% if post.excerpt %}
+        <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <p><a href="{{ '/blogs/' | relative_url }}">View all blog posts →</a></p>
+  {% endif %}
+</div>

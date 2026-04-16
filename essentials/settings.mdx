@@ -1,0 +1,319 @@
+---
+title: 'Settings'
+description: 'Configure your documentation site with mint.json'
+---
+
+## Overview
+
+The `mint.json` file is the configuration center for your Mintlify documentation. It controls:
+
+- Site metadata and branding
+- Navigation structure
+- Color themes
+- Tabs and anchors
+- Footer links
+- Analytics integrations
+
+## Basic Configuration
+
+### Name and Logo
+
+```json
+{
+  "name": "Your Documentation",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg"
+}
+```
+
+### Colors
+
+Customize your color scheme:
+
+```json
+{
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373",
+    "anchors": {
+      "from": "#0D9373",
+      "to": "#07C983"
+    }
+  }
+}
+```
+
+<Tip>
+  Use your brand colors to create a cohesive experience
+</Tip>
+
+## Navigation
+
+### Basic Navigation
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "quickstart"]
+    },
+    {
+      "group": "Guides",
+      "pages": ["guides/overview", "guides/advanced"]
+    }
+  ]
+}
+```
+
+### Nested Pages
+
+```json
+{
+  "navigation": [
+    {
+      "group": "API Reference",
+      "pages": [
+        "api/introduction",
+        {
+          "group": "Endpoints",
+          "pages": [
+            "api/get",
+            "api/post",
+            "api/delete"
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Tabs
+
+Add top-level tabs to organize content:
+
+```json
+{
+  "tabs": [
+    {
+      "name": "API Reference",
+      "url": "api-reference"
+    },
+    {
+      "name": "Blog",
+      "url": "blog"
+    }
+  ]
+}
+```
+
+## Topbar
+
+### Topbar Links
+
+```json
+{
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@example.com"
+    }
+  ]
+}
+```
+
+### CTA Button
+
+```json
+{
+  "topbarCtaButton": {
+    "name": "Dashboard",
+    "url": "https://dashboard.example.com"
+  }
+}
+```
+
+## Anchors
+
+Add external links to your sidebar:
+
+```json
+{
+  "anchors": [
+    {
+      "name": "Documentation",
+      "icon": "book-open-cover",
+      "url": "https://docs.example.com"
+    },
+    {
+      "name": "Community",
+      "icon": "slack",
+      "url": "https://community.example.com"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/yourusername/repo"
+    }
+  ]
+}
+```
+
+## Footer
+
+### Footer Socials
+
+```json
+{
+  "footerSocials": {
+    "x": "https://x.com/username",
+    "github": "https://github.com/username",
+    "linkedin": "https://www.linkedin.com/company/name",
+    "discord": "https://discord.gg/invite",
+    "youtube": "https://youtube.com/@channel"
+  }
+}
+```
+
+## Analytics
+
+### Google Analytics 4
+
+```json
+{
+  "analytics": {
+    "ga4": {
+      "measurementId": "G-XXXXXXXXXX"
+    }
+  }
+}
+```
+
+### Other Analytics
+
+```json
+{
+  "analytics": {
+    "plausible": {
+      "domain": "docs.example.com"
+    },
+    "fathom": {
+      "siteId": "XXXXX"
+    },
+    "mixpanel": {
+      "projectToken": "XXXXX"
+    }
+  }
+}
+```
+
+## Advanced Settings
+
+### Background Image
+
+```json
+{
+  "backgroundImage": "/background.png"
+}
+```
+
+### API Configuration
+
+```json
+{
+  "api": {
+    "baseUrl": "https://api.example.com",
+    "auth": {
+      "method": "bearer"
+    }
+  }
+}
+```
+
+### OpenAPI
+
+```json
+{
+  "openapi": "/openapi.json"
+}
+```
+
+### Search
+
+```json
+{
+  "search": {
+    "prompt": "Search documentation..."
+  }
+}
+```
+
+### Metadata
+
+```json
+{
+  "metadata": {
+    "og:image": "/images/og-image.png",
+    "og:site_name": "Your Docs",
+    "twitter:site": "@username"
+  }
+}
+```
+
+## Complete Example
+
+```json
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Documentation",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373"
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@example.com"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "API",
+      "url": "api"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["introduction", "quickstart"]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/username/repo"
+  }
+}
+```
+
+## Validation
+
+Mintlify validates your `mint.json` file against the schema. Common errors include:
+
+- Missing required pages
+- Invalid navigation structure
+- Broken file references
+- Invalid color formats
+
+<Warning>
+  Always validate your configuration changes by running `mintlify dev` locally
+</Warning>

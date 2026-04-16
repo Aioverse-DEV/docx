@@ -1,0 +1,149 @@
+---
+title: 'Update Resource'
+api: 'PATCH https://api.example.com/v1/resources/{id}'
+description: 'Update an existing resource'
+---
+
+## Path Parameters
+
+<ParamField path="id" type="string" required>
+  The unique identifier of the resource to update
+</ParamField>
+
+## Body Parameters
+
+<ParamField body="title" type="string">
+  Updated title for the resource
+</ParamField>
+
+<ParamField body="content" type="string">
+  Updated content for the resource
+</ParamField>
+
+<ParamField body="status" type="string">
+  Update status: `draft`, `published`, or `archived`
+</ParamField>
+
+<ParamField body="tags" type="array">
+  Updated array of tags (replaces existing tags)
+</ParamField>
+
+## Response
+
+<ResponseField name="id" type="string">
+  Unique identifier for the resource
+</ResponseField>
+
+<ResponseField name="title" type="string">
+  Updated title of the resource
+</ResponseField>
+
+<ResponseField name="content" type="string">
+  Updated content of the resource
+</ResponseField>
+
+<ResponseField name="status" type="string">
+  Current status of the resource
+</ResponseField>
+
+<ResponseField name="updated_at" type="string">
+  ISO 8601 timestamp when the resource was last updated
+</ResponseField>
+
+<RequestExample>
+
+```bash cURL
+curl -X PATCH \
+  https://api.example.com/v1/resources/res_1234567890 \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "title": "Updated Documentation Title",
+    "status": "published"
+  }'
+```
+
+```javascript JavaScript
+const response = await fetch('https://api.example.com/v1/resources/res_1234567890', {
+  method: 'PATCH',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    title: 'Updated Documentation Title',
+    status: 'published'
+  })
+});
+
+const data = await response.json();
+```
+
+```python Python
+import requests
+
+url = "https://api.example.com/v1/resources/res_1234567890"
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Content-Type": "application/json"
+}
+payload = {
+    "title": "Updated Documentation Title",
+    "status": "published"
+}
+
+response = requests.patch(url, headers=headers, json=payload)
+data = response.json()
+```
+
+```go Go
+package main
+
+import (
+    "bytes"
+    "encoding/json"
+    "net/http"
+)
+
+func main() {
+    payload := map[string]interface{}{
+        "title": "Updated Documentation Title",
+        "status": "published",
+    }
+    
+    jsonPayload, _ := json.Marshal(payload)
+    req, _ := http.NewRequest("PATCH", "https://api.example.com/v1/resources/res_1234567890", bytes.NewBuffer(jsonPayload))
+    req.Header.Set("Authorization", "Bearer YOUR_API_KEY")
+    req.Header.Set("Content-Type", "application/json")
+    
+    client := &http.Client{}
+    resp, _ := client.Do(req)
+    defer resp.Body.Close()
+}
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "success": true,
+  "data": {
+    "id": "res_1234567890",
+    "title": "Updated Documentation Title",
+    "content": "This is a comprehensive guide...",
+    "status": "published",
+    "created_at": "2024-01-01T12:00:00Z",
+    "updated_at": "2024-01-20T15:45:00Z",
+    "author": {
+      "id": "usr_0987654321",
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    "tags": ["guide", "documentation", "getting-started"]
+  }
+}
+```
+
+</ResponseExample>

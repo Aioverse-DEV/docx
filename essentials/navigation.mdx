@@ -1,0 +1,334 @@
+---
+title: 'Navigation'
+description: 'Structure and organize your documentation navigation'
+---
+
+## Navigation Structure
+
+The navigation in `mint.json` defines how users explore your documentation.
+
+## Basic Navigation
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": ["introduction", "quickstart", "installation"]
+    }
+  ]
+}
+```
+
+## Multi-Level Navigation
+
+### Two Levels
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["intro", "setup"]
+    },
+    {
+      "group": "Guides",
+      "pages": ["guides/basic", "guides/advanced", "guides/expert"]
+    }
+  ]
+}
+```
+
+### Nested Groups
+
+```json
+{
+  "navigation": [
+    {
+      "group": "API Reference",
+      "pages": [
+        "api/overview",
+        {
+          "group": "Authentication",
+          "pages": [
+            "api/auth/overview",
+            "api/auth/oauth",
+            "api/auth/api-keys"
+          ]
+        },
+        {
+          "group": "Endpoints",
+          "pages": [
+            "api/endpoints/users",
+            "api/endpoints/posts",
+            "api/endpoints/comments"
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Tabs
+
+Create separate top-level sections with tabs:
+
+```json
+{
+  "tabs": [
+    {
+      "name": "Documentation",
+      "url": "docs"
+    },
+    {
+      "name": "API Reference",
+      "url": "api"
+    },
+    {
+      "name": "Blog",
+      "url": "blog"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Documentation",
+      "pages": ["docs/intro"]
+    },
+    {
+      "group": "API",
+      "pages": ["api/intro"]
+    },
+    {
+      "group": "Blog",
+      "pages": ["blog/overview"]
+    }
+  ]
+}
+```
+
+## Page References
+
+### File Paths
+
+Reference pages without the `.mdx` extension:
+
+```json
+{
+  "pages": [
+    "getting-started",           // references getting-started.mdx
+    "guides/quickstart",         // references guides/quickstart.mdx
+    "api/reference/endpoints"    // references api/reference/endpoints.mdx
+  ]
+}
+```
+
+### External Links
+
+Link to external resources:
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Resources",
+      "pages": [
+        "internal-page",
+        {
+          "page": "External Link",
+          "url": "https://example.com"
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Anchors
+
+Add prominent links in your sidebar:
+
+```json
+{
+  "anchors": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/username/repo"
+    },
+    {
+      "name": "Community",
+      "icon": "slack",
+      "url": "https://community.example.com"
+    },
+    {
+      "name": "API Status",
+      "icon": "signal",
+      "url": "https://status.example.com"
+    }
+  ]
+}
+```
+
+### Available Icons
+
+Mintlify supports Font Awesome icons. Popular choices:
+
+- `github`
+- `slack`
+- `discord`
+- `twitter` / `x-twitter`
+- `book-open-cover`
+- `code`
+- `signal`
+- `circle-question`
+- `lightbulb`
+
+## Best Practices
+
+### Logical Grouping
+
+<Tip>
+  Group related pages together for easier navigation
+</Tip>
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Core Concepts",
+      "pages": ["concepts/overview", "concepts/architecture", "concepts/data-model"]
+    },
+    {
+      "group": "Tutorials",
+      "pages": ["tutorials/beginner", "tutorials/intermediate", "tutorials/advanced"]
+    }
+  ]
+}
+```
+
+### Clear Naming
+
+Use descriptive group names:
+
+✅ Good:
+```json
+{
+  "group": "Authentication & Authorization",
+  "pages": [...]
+}
+```
+
+❌ Bad:
+```json
+{
+  "group": "Auth",
+  "pages": [...]
+}
+```
+
+### Limit Depth
+
+<Warning>
+  Avoid nesting more than 2-3 levels deep to maintain clarity
+</Warning>
+
+### Progressive Disclosure
+
+Order pages from simple to complex:
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Learning Path",
+      "pages": [
+        "basics/introduction",
+        "basics/your-first-project",
+        "intermediate/best-practices",
+        "advanced/optimization",
+        "expert/architecture"
+      ]
+    }
+  ]
+}
+```
+
+## Navigation Patterns
+
+### Documentation Hub
+
+```json
+{
+  "tabs": [
+    {
+      "name": "Guides",
+      "url": "guides"
+    },
+    {
+      "name": "API",
+      "url": "api"
+    },
+    {
+      "name": "SDKs",
+      "url": "sdks"
+    }
+  ]
+}
+```
+
+### Product Documentation
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["intro", "quickstart"]
+    },
+    {
+      "group": "Features",
+      "pages": ["features/dashboard", "features/analytics", "features/integrations"]
+    },
+    {
+      "group": "API Reference",
+      "pages": ["api/overview", "api/authentication", "api/endpoints"]
+    }
+  ]
+}
+```
+
+### Developer Tools
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Essentials",
+      "pages": ["installation", "configuration", "usage"]
+    },
+    {
+      "group": "CLI Reference",
+      "pages": ["cli/commands", "cli/options", "cli/examples"]
+    },
+    {
+      "group": "Integrations",
+      "pages": ["integrations/github", "integrations/gitlab", "integrations/ci-cd"]
+    }
+  ]
+}
+```
+
+## Testing Navigation
+
+Always test your navigation structure:
+
+1. Run `mintlify dev` locally
+2. Click through all links
+3. Verify page hierarchy makes sense
+4. Check for broken links
+5. Ensure smooth user flow
+
+<Note>
+  Navigation changes require a server restart to take effect
+</Note>

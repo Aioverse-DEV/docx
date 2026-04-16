@@ -1,0 +1,143 @@
+---
+title: 'Development'
+description: 'Learn how to preview and deploy changes to your documentation'
+---
+
+## Development Workflow
+
+<Steps>
+  <Step title="Local Development">
+    Run the Mintlify development server to preview your changes:
+    ```bash
+    mintlify dev
+    ```
+    This will start a local server at `http://localhost:3000` with hot-reloading enabled.
+  </Step>
+
+  <Step title="Make Changes">
+    Edit your MDX files and see changes reflected immediately in your browser.
+  </Step>
+
+  <Step title="Test Your Changes">
+    Ensure all your links work and components render correctly before deploying.
+  </Step>
+
+  <Step title="Commit and Push">
+    Once you're happy with your changes, commit and push to your repository:
+    ```bash
+    git add .
+    git commit -m "Update documentation"
+    git push
+    ```
+  </Step>
+</Steps>
+
+## Deployment
+
+<Tabs>
+  <Tab title="Mintlify Cloud">
+    ### Deploy to Mintlify Cloud
+
+    The easiest way to deploy your documentation is through Mintlify Cloud:
+
+    1. **Connect your repository**
+       - Sign up at [mintlify.com](https://mintlify.com)
+       - Connect your GitHub repository
+       - Select the branch to deploy
+
+    2. **Configure settings**
+       - Set your custom domain (optional)
+       - Configure build settings
+       - Set environment variables
+
+    3. **Deploy**
+       - Mintlify will automatically deploy on every push to your main branch
+       - Preview deployments are created for pull requests
+
+    <Tip>
+      Mintlify Cloud provides automatic SSL, global CDN, and built-in analytics.
+    </Tip>
+  </Tab>
+
+  <Tab title="Self-Hosted">
+    ### Self-Hosted Deployment
+
+    You can also host your Mintlify documentation yourself:
+
+    1. **Build your documentation**
+       ```bash
+       mintlify build
+       ```
+
+    2. **Deploy the output**
+       Deploy the generated static files to your hosting provider of choice:
+       - Vercel
+       - Netlify
+       - AWS S3 + CloudFront
+       - GitHub Pages
+       - Any static hosting service
+
+    <Note>
+      Self-hosted deployments require manual updates and don't include Mintlify Cloud features.
+    </Note>
+  </Tab>
+</Tabs>
+
+## Environment Variables
+
+If your documentation requires environment variables, create a `.env` file:
+
+```bash
+# .env
+API_URL=https://api.example.com
+PUBLIC_KEY=your_public_key
+```
+
+<Warning>
+  Never commit sensitive environment variables to your repository. Use your hosting provider's environment variable settings instead.
+</Warning>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Port already in use">
+    If port 3000 is already in use, specify a different port:
+    ```bash
+    mintlify dev --port 3001
+    ```
+  </Accordion>
+
+  <Accordion title="Changes not reflecting">
+    Try these steps:
+    1. Clear your browser cache
+    2. Restart the development server
+    3. Check for syntax errors in your MDX files
+  </Accordion>
+
+  <Accordion title="Build errors">
+    Common build issues:
+    - Missing required frontmatter fields
+    - Invalid navigation structure in mint.json
+    - Broken internal links
+    - Unsupported MDX syntax
+  </Accordion>
+</AccordionGroup>
+
+## Resources
+
+<CardGroup cols={2}>
+  <Card
+    title="Mintlify Documentation"
+    icon="book"
+    href="https://mintlify.com/docs"
+  >
+    Official Mintlify documentation
+  </Card>
+  <Card
+    title="GitHub Discussions"
+    icon="github"
+    href="https://github.com/mintlify/mint/discussions"
+  >
+    Community support and discussions
+  </Card>
+</CardGroup>

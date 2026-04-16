@@ -1,0 +1,122 @@
+---
+title: 'Quickstart'
+description: 'Start using Docx in under 5 minutes'
+---
+
+## Setup your environment
+
+Learn how to set up your documentation environment and start creating content.
+
+<AccordionGroup>
+  <Accordion icon="github" title="Clone the repository">
+    First, clone the repository to your local machine:
+    ```bash
+    git clone https://github.com/Aioverse-DEV/docx.git
+    cd docx
+    ```
+  </Accordion>
+
+  <Accordion icon="download" title="Install dependencies">
+    Install the required dependencies:
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+  </Accordion>
+
+  <Accordion icon="play" title="Run locally">
+    Start the development server:
+    ```bash
+    mintlify dev
+    ```
+    Your documentation will be available at `http://localhost:3000`
+  </Accordion>
+</AccordionGroup>
+
+## Make it yours
+
+Update the following files to customize your documentation:
+
+<CardGroup cols={2}>
+  <Card title="mint.json" icon="gear" href="/essentials/settings">
+    Configure your documentation settings, branding, and navigation
+  </Card>
+  <Card title="Content Pages" icon="file" href="/essentials/markdown">
+    Update MDX files with your content and documentation
+  </Card>
+</CardGroup>
+
+## Add content
+
+<Steps>
+  <Step title="Create a new page">
+    Create a new `.mdx` file in your documentation folder:
+    ```bash
+    touch my-new-page.mdx
+    ```
+  </Step>
+  <Step title="Add frontmatter">
+    Add the required frontmatter at the top of your file:
+    ```mdx
+    ---
+    title: 'My New Page'
+    description: 'Description of my new page'
+    ---
+    ```
+  </Step>
+  <Step title="Update navigation">
+    Add your new page to the navigation in `mint.json`:
+    ```json
+    "navigation": [
+      {
+        "group": "Get Started",
+        "pages": ["introduction", "my-new-page"]
+      }
+    ]
+    ```
+  </Step>
+  <Step title="Deploy">
+    Push your changes to deploy:
+    ```bash
+    git add .
+    git commit -m "Add new page"
+    git push
+    ```
+  </Step>
+</Steps>
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Customize Style"
+    icon="palette"
+    href="/essentials/settings"
+  >
+    Personalize your documentation with custom colors and branding
+  </Card>
+  <Card
+    title="Add Components"
+    icon="puzzle-piece"
+    href="/essentials/markdown"
+  >
+    Learn about Mintlify's powerful MDX components
+  </Card>
+  <Card
+    title="API Documentation"
+    icon="code"
+    href="/api-reference/introduction"
+  >
+    Document your API endpoints
+  </Card>
+  <Card
+    title="Deployment"
+    icon="rocket"
+    href="/development"
+  >
+    Deploy your documentation to production
+  </Card>
+</CardGroup>

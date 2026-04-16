@@ -1,0 +1,192 @@
+---
+title: 'Markdown Syntax'
+description: 'Learn how to use Markdown and MDX in your documentation'
+---
+
+## Text Formatting
+
+Mintlify supports standard Markdown syntax for text formatting:
+
+### Basic Formatting
+
+**Bold text** using `**bold**` or `__bold__`
+
+*Italic text* using `*italic*` or `_italic_`
+
+***Bold and italic*** using `***bold and italic***`
+
+~~Strikethrough~~ using `~~strikethrough~~`
+
+### Headings
+
+```markdown
+# H1 Heading
+## H2 Heading
+### H3 Heading
+#### H4 Heading
+##### H5 Heading
+###### H6 Heading
+```
+
+## Lists
+
+### Unordered Lists
+
+- Item 1
+- Item 2
+  - Nested item 2.1
+  - Nested item 2.2
+- Item 3
+
+### Ordered Lists
+
+1. First item
+2. Second item
+3. Third item
+   1. Nested item 3.1
+   2. Nested item 3.2
+
+### Task Lists
+
+- [x] Completed task
+- [ ] Incomplete task
+- [ ] Another incomplete task
+
+## Links and Images
+
+### Links
+
+[Link text](https://example.com)
+
+[Link with title](https://example.com "Title text")
+
+### Images
+
+```markdown
+![Alt text](/path/to/image.png)
+```
+
+<img src="/images/example.png" alt="Example" />
+
+## Code
+
+### Inline Code
+
+Use `inline code` with backticks.
+
+### Code Blocks
+
+```javascript
+function hello() {
+  console.log("Hello, world!");
+}
+```
+
+```python
+def hello():
+    print("Hello, world!")
+```
+
+## Tables
+
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Row 1    | Data     | Data     |
+| Row 2    | Data     | Data     |
+| Row 3    | Data     | Data     |
+
+## Blockquotes
+
+> This is a blockquote
+> 
+> It can span multiple lines
+
+## Horizontal Rule
+
+---
+
+## MDX Components
+
+Mintlify provides special MDX components for enhanced documentation:
+
+### Callouts
+
+<Note>
+  This is a note callout
+</Note>
+
+<Tip>
+  This is a tip callout
+</Tip>
+
+<Info>
+  This is an info callout
+</Info>
+
+<Warning>
+  This is a warning callout
+</Warning>
+
+### Card Groups
+
+<CardGroup cols={2}>
+  <Card title="Card 1" icon="star">
+    Card content here
+  </Card>
+  <Card title="Card 2" icon="heart">
+    More content here
+  </Card>
+</CardGroup>
+
+### Accordion
+
+<AccordionGroup>
+  <Accordion title="First Question">
+    Answer to the first question
+  </Accordion>
+  <Accordion title="Second Question">
+    Answer to the second question
+  </Accordion>
+</AccordionGroup>
+
+### Tabs
+
+<Tabs>
+  <Tab title="JavaScript">
+    ```javascript
+    console.log("Hello from JS");
+    ```
+  </Tab>
+  <Tab title="Python">
+    ```python
+    print("Hello from Python")
+    ```
+  </Tab>
+</Tabs>
+
+### Steps
+
+<Steps>
+  <Step title="First Step">
+    Description of the first step
+  </Step>
+  <Step title="Second Step">
+    Description of the second step
+  </Step>
+</Steps>
+
+## Mathematical Expressions
+
+Inline math: $E = mc^2$
+
+Block math:
+
+$$
+\int_{a}^{b} f(x) dx
+$$
+
+## Custom Styling
+
+<div className="custom-class">
+  You can use HTML and custom CSS classes for advanced styling
+</div>

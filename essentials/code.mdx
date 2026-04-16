@@ -1,0 +1,184 @@
+---
+title: 'Code Blocks'
+description: 'Display code with syntax highlighting and interactive features'
+---
+
+## Basic Code Blocks
+
+Use triple backticks with a language identifier:
+
+```javascript
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+```
+
+```python
+def greet(name):
+    return f"Hello, {name}!"
+```
+
+```typescript
+function greet(name: string): string {
+  return `Hello, ${name}!`;
+}
+```
+
+## Supported Languages
+
+Mintlify supports syntax highlighting for 100+ languages including:
+
+- JavaScript/TypeScript
+- Python
+- Java
+- C/C++
+- Go
+- Rust
+- Ruby
+- PHP
+- Swift
+- Kotlin
+- And many more!
+
+## Code with Filename
+
+```javascript title="example.js"
+const message = "Hello, World!";
+console.log(message);
+```
+
+## Line Highlighting
+
+Highlight specific lines in your code:
+
+```javascript {2,4-6}
+function example() {
+  const highlighted = true;  // This line is highlighted
+  const normal = true;
+  const alsoHighlighted = true;  // Lines 4-6 are highlighted
+  const stillHighlighted = true;
+  const lastHighlighted = true;
+  const normal2 = true;
+}
+```
+
+## Line Numbers
+
+Enable line numbers for your code:
+
+```python showLineNumbers
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+result = factorial(5)
+print(result)
+```
+
+## Code Groups
+
+Group related code snippets with tabs:
+
+<CodeGroup>
+
+```javascript JavaScript
+const response = await fetch('/api/endpoint');
+const data = await response.json();
+```
+
+```python Python
+import requests
+
+response = requests.get('/api/endpoint')
+data = response.json()
+```
+
+```bash cURL
+curl -X GET https://api.example.com/endpoint
+```
+
+</CodeGroup>
+
+## Interactive Code Blocks
+
+Mintlify supports copy-to-clipboard functionality by default for all code blocks.
+
+## Terminal/Shell Commands
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Diff Highlighting
+
+Show additions and deletions:
+
+```diff
+function example() {
+-  const oldValue = "old";
++  const newValue = "new";
+   return newValue;
+}
+```
+
+## Configuration Examples
+
+### JSON Configuration
+
+```json
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "mintlify dev",
+    "build": "mintlify build"
+  }
+}
+```
+
+### YAML Configuration
+
+```yaml
+name: Deploy Documentation
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy
+        run: mintlify deploy
+```
+
+### Environment Variables
+
+```bash
+# .env
+DATABASE_URL=postgresql://localhost:5432/mydb
+API_KEY=your_api_key_here
+NODE_ENV=production
+```
+
+## Best Practices
+
+<Tip>
+  Always specify the language for syntax highlighting
+</Tip>
+
+<Note>
+  Use meaningful filenames in code blocks to provide context
+</Note>
+
+<Warning>
+  Never include sensitive information like API keys or passwords in your code examples
+</Warning>

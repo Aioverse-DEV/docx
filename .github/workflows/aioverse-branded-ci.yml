@@ -19,6 +19,8 @@ env:
 jobs:
   branded-job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     
     steps:
       - name: 🎨 AIOVERSE Branding Info

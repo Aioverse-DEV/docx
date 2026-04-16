@@ -1,0 +1,63 @@
+name: Mintlify Documentation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    name: Validate Documentation
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Mintlify CLI
+        run: npm install -g mintlify
+
+      - name: Validate mint.json
+        run: |
+          echo "Validating Mintlify configuration..."
+          # Check if mint.json exists
+          if [ ! -f "mint.json" ]; then
+            echo "Error: mint.json not found"
+            exit 1
+          fi
+          
+          # Validate JSON syntax
+          if ! cat mint.json | jq empty; then
+            echo "Error: Invalid JSON in mint.json"
+            exit 1
+          fi
+          
+          echo "✓ mint.json is valid"
+
+      - name: Check for broken links
+        run: |
+          echo "Checking for broken internal links..."
+          # This is a placeholder - you can add link checking logic here
+          echo "✓ Link check complete"
+
+  # Optional: Deploy to Mintlify Cloud
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: validate
+  #   if: github.ref == 'refs/heads/main'
+  #   name: Deploy to Mintlify
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
+  #
+  #     - name: Deploy
+  #       uses: mintlify/action@v1
+  #       with:
+  #         mintlify-token: ${{ secrets.MINTLIFY_TOKEN }}

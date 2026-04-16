@@ -1,0 +1,28 @@
+{
+  "name": "docx-documentation",
+  "version": "1.0.0",
+  "description": "Documentation hub for blogs, knowledge base, notes, wiki, and library",
+  "scripts": {
+    "dev": "mintlify dev",
+    "install:cli": "npm install -g mintlify",
+    "preview": "mintlify dev"
+  },
+  "keywords": [
+    "documentation",
+    "mintlify",
+    "docs",
+    "blog",
+    "wiki",
+    "knowledge-base"
+  ],
+  "author": "Aioverse-DEV",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aioverse-DEV/docx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aioverse-DEV/docx/issues"
+  },
+  "homepage": "https://github.com/Aioverse-DEV/docx#readme"
+}

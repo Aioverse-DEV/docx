@@ -1,0 +1,58 @@
+# AIOVERSE GitHub Actions Workflow Template
+# Apply AIOVERSE brand colors to workflow badges and outputs
+# Version 1.0 - March 2026
+
+name: AIOVERSE Branded Workflow
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+env:
+  # AIOVERSE Brand Colors
+  AIO_ELECTRIC_AQUA: '#73effb'
+  AIO_MIDNIGHT_TEAL: '#002428'
+  AIO_SOFT_WHITE: '#fafafa'
+
+jobs:
+  branded-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🎨 AIOVERSE Branding Info
+        run: |
+          echo "::notice::🎨 AIOVERSE Brand Theme Applied"
+          echo "Primary Color: Electric Aqua (#73effb)"
+          echo "Background: Midnight Teal (#002428)"
+          echo "Text: Soft White (#fafafa)"
+      
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run tests
+        run: npm test
+      
+      - name: Build
+        run: npm run build
+      
+      - name: 📊 Generate AIOVERSE Branded Badge
+        if: success()
+        run: |
+          echo "![Build Status](https://img.shields.io/badge/Build-Passing-73effb?style=for-the-badge&logo=github)" >> $GITHUB_STEP_SUMMARY
+          echo "![AIOVERSE](https://img.shields.io/badge/AIOVERSE-Brand-73effb?style=for-the-badge)" >> $GITHUB_STEP_SUMMARY
+      
+      - name: ❌ Failure Notice
+        if: failure()
+        run: |
+          echo "::error::Build failed - check logs for details"
+          echo "![Build Status](https://img.shields.io/badge/Build-Failed-ff0000?style=for-the-badge&logo=github)" >> $GITHUB_STEP_SUMMARY

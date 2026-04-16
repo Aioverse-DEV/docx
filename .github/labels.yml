@@ -1,0 +1,85 @@
+# GitHub Issue Labels - AIOVERSE Brand Colors
+# Use these labels across all Aioverse-DEV repositories for consistency
+# Apply via: Settings > Issues > Labels
+
+labels:
+  # Priority Labels (Electric Aqua variants)
+  - name: "priority: critical"
+    color: "73effb"
+    description: "Critical priority - requires immediate attention"
+  
+  - name: "priority: high"
+    color: "73effb"
+    description: "High priority"
+  
+  - name: "priority: medium"
+    color: "4db8c4"
+    description: "Medium priority"
+  
+  - name: "priority: low"
+    color: "2d7a86"
+    description: "Low priority"
+  
+  # Type Labels (Midnight Teal variants)
+  - name: "type: bug"
+    color: "ff6b6b"
+    description: "Something isn't working"
+  
+  - name: "type: feature"
+    color: "73effb"
+    description: "New feature or request"
+  
+  - name: "type: enhancement"
+    color: "4db8c4"
+    description: "Enhancement to existing feature"
+  
+  - name: "type: documentation"
+    color: "002428"
+    description: "Documentation improvements"
+  
+  - name: "type: security"
+    color: "ff8800"
+    description: "Security-related issue"
+  
+  # Status Labels (Soft White - use light colors)
+  - name: "status: in progress"
+    color: "ffd700"
+    description: "Work is in progress"
+  
+  - name: "status: blocked"
+    color: "ff0000"
+    description: "Blocked by dependencies"
+  
+  - name: "status: review needed"
+    color: "73effb"
+    description: "Requires code review"
+  
+  - name: "status: ready"
+    color: "00ff00"
+    description: "Ready for deployment"
+  
+  # Area Labels (AIOVERSE brand colors)
+  - name: "area: drone"
+    color: "73effb"
+    description: "Related to drone systems"
+  
+  - name: "area: ai"
+    color: "73effb"
+    description: "Related to AI/ML components"
+  
+  - name: "area: infrastructure"
+    color: "002428"
+    description: "Infrastructure and DevOps"
+  
+  - name: "area: frontend"
+    color: "4db8c4"
+    description: "Frontend/UI related"
+  
+  - name: "area: backend"
+    color: "002428"
+    description: "Backend/API related"
+  
+  # AIOVERSE Brand Label
+  - name: "AIOVERSE"
+    color: "73effb"
+    description: "Official AIOVERSE branded item"

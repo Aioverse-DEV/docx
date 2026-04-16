@@ -1,0 +1,63 @@
+{
+  "name": "AIOVERSE",
+  "version": "1.0.0",
+  "description": "Official AIOVERSE brand theme configuration",
+  "colors": {
+    "electricAqua": {
+      "hex": "#73effb",
+      "rgb": [115, 239, 251],
+      "cmyk": [52.18, 0, 10.09, 0],
+      "name": "Electric Aqua",
+      "usage": "Primary accent, CTAs, highlights, interactive elements"
+    },
+    "midnightTeal": {
+      "hex": "#002428",
+      "rgb": [0, 36, 40],
+      "cmyk": [88.58, 63.91, 62.23, 69.45],
+      "name": "Midnight Teal",
+      "usage": "Primary backgrounds, hero sections, high-contrast layouts"
+    },
+    "softWhite": {
+      "hex": "#fafafa",
+      "rgb": [250, 250, 250],
+      "cmyk": [1.23, 0.57, 0.57, 0],
+      "name": "Soft White",
+      "usage": "Body text on dark, UI containers, document backgrounds"
+    }
+  },
+  "typography": {
+    "primaryDisplay": {
+      "family": "NEBULA 2",
+      "style": "Futuristic Sans",
+      "usage": "Headlines, Logomark, Key messaging"
+    },
+    "secondaryDisplay": {
+      "family": "Nohemi",
+      "style": "Geometric Sans",
+      "usage": "Sub-headings, Section labels, UI headers"
+    },
+    "body": {
+      "family": "Helvetica Neue",
+      "style": "Neutral Sans",
+      "usage": "Body copy, Paragraph text, Data tables"
+    },
+    "monospace": {
+      "family": "Tokyo Trail Mono",
+      "style": "Monospace",
+      "usage": "Code blocks, Technical specs, Terminals"
+    }
+  },
+  "assets": {
+    "brandingRepo": "https://github.com/Aioverse-DEV/Aioverse-Branding",
+    "logos": {
+      "electricAqua": "logo_electricaqua.svg",
+      "midnightTeal": "logo_midnightteal.svg",
+      "softWhite": "logo_softwhite.svg"
+    },
+    "logomarks": {
+      "electricAqua": "lm_electricaqua.svg",
+      "midnightTeal": "lm_midnightteal.svg",
+      "softWhite": "lm_softwhite.svg"
+    }
+  }
+}

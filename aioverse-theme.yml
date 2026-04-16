@@ -1,0 +1,141 @@
+# AIOVERSE Brand Theme Configuration
+# Official color palette and theming for all Aioverse-DEV repositories, tasks, and jobs
+# Version 1.0 - March 2026
+
+brand:
+  name: "AIOVERSE"
+  company: "Aiotize Inc."
+  tagline: "AI-Powered Drone & UAV Systems"
+
+colors:
+  primary:
+    electric_aqua:
+      name: "Electric Aqua"
+      hex: "#73effb"
+      rgb: "115, 239, 251"
+      cmyk: "52.18, 0, 10.09, 0"
+      description: "The signal frequency of intelligent systems. Use for primary CTAs, active states, highlights, and interactive UI elements."
+      usage:
+        - "Primary call-to-action buttons"
+        - "Active states"
+        - "Data highlights"
+        - "Interactive UI elements"
+        - "Links and accents"
+    
+    midnight_teal:
+      name: "Midnight Teal"
+      hex: "#002428"
+      rgb: "0, 36, 40"
+      cmyk: "88.58, 63.91, 62.23, 69.45"
+      description: "The deep intelligence layer. Use for primary backgrounds, hero sections, and high-contrast layouts."
+      usage:
+        - "Primary backgrounds"
+        - "Hero sections"
+        - "Presentation decks"
+        - "Dark mode UI"
+        - "Navigation bars"
+    
+    soft_white:
+      name: "Soft White"
+      hex: "#fafafa"
+      rgb: "250, 250, 250"
+      cmyk: "1.23, 0.57, 0.57, 0"
+      description: "Clarity and precision in the open field. Use for body text on dark, UI containers, and document backgrounds."
+      usage:
+        - "Body text on dark backgrounds"
+        - "UI containers"
+        - "Document backgrounds"
+        - "Light mode backgrounds"
+        - "Clean layout structures"
+
+typography:
+  primary_display:
+    name: "NEBULA 2"
+    style: "Futuristic Sans"
+    usage: "Headlines, Logomark, Key messaging"
+    weights: ["Thin", "Regular", "Bold", "ExtraBold"]
+  
+  secondary_display:
+    name: "Nohemi"
+    style: "Geometric Sans"
+    usage: "Sub-headings, Section labels, UI headers"
+    weights: ["Thin", "Light", "Regular", "Medium", "SemiBold", "Bold", "ExtraBold"]
+  
+  body:
+    name: "Helvetica Neue"
+    style: "Neutral Sans"
+    usage: "Body copy, Paragraph text, Data tables"
+    weights: ["Regular", "Medium"]
+  
+  accent:
+    name: "Sarpanch"
+    style: "Display"
+    usage: "Campaign headlines, Emphasis"
+  
+  monospace:
+    name: "Tokyo Trail Mono"
+    style: "Monospace"
+    usage: "Code blocks, Technical specs, Data feeds, Terminals"
+
+hierarchy:
+  h1:
+    font: "NEBULA 2 ExtraBold"
+    size: "48-72pt"
+    color: ["electric_aqua", "soft_white"]
+  h2:
+    font: "NEBULA 2 Bold"
+    size: "32-48pt"
+    color: ["soft_white", "midnight_teal"]
+  h3:
+    font: "Nohemi Medium"
+    size: "24-32pt"
+    color: "electric_aqua"
+  h4:
+    font: "Nohemi SemiBold"
+    size: "18-24pt"
+    color: "soft_white"
+  body:
+    font: "Helvetica Neue Regular"
+    size: "14-16pt"
+    color: "soft_white"
+  caption:
+    font: "Tokyo Trail Mono"
+    size: "11-12pt"
+    color: "soft_white (60% opacity)"
+  code:
+    font: "Tokyo Trail Mono"
+    size: "13pt"
+    color: "electric_aqua on midnight_teal"
+
+design_principles:
+  - "Dark-Field First: Lead with Midnight Teal as the dominant base"
+  - "Signal Over Noise: Every design element serves communication"
+  - "Geometric Tension: Use diagonal lines, angular crops, and structural grid systems"
+  - "Monochromatic Depth: Build depth within the brand palette"
+  - "Type as Architecture: Typography is structural"
+  - "Whitespace as Intention: Negative space communicates clarity and confidence"
+
+voice_tone:
+  attributes:
+    - "Authoritative: Commands confidence"
+    - "Precise: Clear, specific, never vague"
+    - "Forward-Thinking: Speaks to the future of autonomous systems"
+    - "Mission-Focused: Grounded in real-world impact"
+    - "Concise: Engineered brevity"
+  
+  avoid:
+    - "Generic AI buzzwords: revolutionary, groundbreaking, game-changing"
+  
+  prefer:
+    - "autonomous, edge-native, mission-capable, flight-ready, ISR-grade"
+
+assets:
+  branding_repo: "https://github.com/Aioverse-DEV/Aioverse-Branding"
+  logo_variants:
+    - "logo_electricaqua.svg"
+    - "logo_midnightteal.svg"
+    - "logo_softwhite.svg"
+  logomark:
+    - "lm_electricaqua.svg"
+    - "lm_midnightteal.svg"
+    - "lm_softwhite.svg"

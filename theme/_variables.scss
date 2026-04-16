@@ -1,0 +1,137 @@
+// AIOVERSE Brand Theme - SCSS/SASS Variables
+// Official color palette and theming for SCSS/SASS projects
+// Version 1.0 - March 2026
+
+// Primary Brand Colors
+$aio-electric-aqua: #73effb;
+$aio-midnight-teal: #002428;
+$aio-soft-white: #fafafa;
+
+// RGB Values
+$aio-electric-aqua-rgb: 115, 239, 251;
+$aio-midnight-teal-rgb: 0, 36, 40;
+$aio-soft-white-rgb: 250, 250, 250;
+
+// Color Opacity Variants
+$aio-electric-aqua-90: rgba($aio-electric-aqua-rgb, 0.9);
+$aio-electric-aqua-80: rgba($aio-electric-aqua-rgb, 0.8);
+$aio-electric-aqua-70: rgba($aio-electric-aqua-rgb, 0.7);
+$aio-electric-aqua-60: rgba($aio-electric-aqua-rgb, 0.6);
+$aio-electric-aqua-50: rgba($aio-electric-aqua-rgb, 0.5);
+$aio-electric-aqua-40: rgba($aio-electric-aqua-rgb, 0.4);
+$aio-electric-aqua-30: rgba($aio-electric-aqua-rgb, 0.3);
+$aio-electric-aqua-20: rgba($aio-electric-aqua-rgb, 0.2);
+$aio-electric-aqua-10: rgba($aio-electric-aqua-rgb, 0.1);
+
+$aio-midnight-teal-90: rgba($aio-midnight-teal-rgb, 0.9);
+$aio-midnight-teal-80: rgba($aio-midnight-teal-rgb, 0.8);
+$aio-midnight-teal-70: rgba($aio-midnight-teal-rgb, 0.7);
+$aio-midnight-teal-60: rgba($aio-midnight-teal-rgb, 0.6);
+$aio-midnight-teal-50: rgba($aio-midnight-teal-rgb, 0.5);
+
+$aio-soft-white-90: rgba($aio-soft-white-rgb, 0.9);
+$aio-soft-white-80: rgba($aio-soft-white-rgb, 0.8);
+$aio-soft-white-70: rgba($aio-soft-white-rgb, 0.7);
+$aio-soft-white-60: rgba($aio-soft-white-rgb, 0.6);
+$aio-soft-white-50: rgba($aio-soft-white-rgb, 0.5);
+
+// Semantic Color Mapping
+$aio-primary: $aio-electric-aqua;
+$aio-background-dark: $aio-midnight-teal;
+$aio-background-light: $aio-soft-white;
+$aio-text-on-dark: $aio-soft-white;
+$aio-text-on-light: $aio-midnight-teal;
+$aio-accent: $aio-electric-aqua;
+$aio-highlight: $aio-electric-aqua;
+
+// Gradients
+$aio-gradient-primary: linear-gradient(135deg, $aio-midnight-teal 0%, $aio-electric-aqua-30 100%);
+$aio-gradient-accent: linear-gradient(90deg, $aio-electric-aqua 0%, $aio-soft-white 100%);
+$aio-gradient-dark: linear-gradient(180deg, $aio-midnight-teal 0%, $aio-midnight-teal-90 100%);
+
+// Typography
+$aio-font-primary-display: 'NEBULA 2', sans-serif;
+$aio-font-secondary-display: 'Nohemi', sans-serif;
+$aio-font-body: 'Helvetica Neue', Arial, sans-serif;
+$aio-font-monospace: 'Tokyo Trail Mono', 'Courier New', monospace;
+
+// Font Sizes
+$aio-font-size-h1: 72px;
+$aio-font-size-h2: 48px;
+$aio-font-size-h3: 32px;
+$aio-font-size-h4: 24px;
+$aio-font-size-body: 16px;
+$aio-font-size-caption: 12px;
+$aio-font-size-code: 13px;
+
+// Spacing
+$aio-spacing-xs: 0.25rem;
+$aio-spacing-sm: 0.5rem;
+$aio-spacing-md: 1rem;
+$aio-spacing-lg: 1.5rem;
+$aio-spacing-xl: 2rem;
+$aio-spacing-xxl: 3rem;
+
+// Border Radius
+$aio-border-radius-sm: 4px;
+$aio-border-radius-md: 8px;
+$aio-border-radius-lg: 12px;
+$aio-border-radius-full: 9999px;
+
+// Mixins
+@mixin aio-dark-theme {
+  background-color: $aio-background-dark;
+  color: $aio-text-on-dark;
+}
+
+@mixin aio-light-theme {
+  background-color: $aio-background-light;
+  color: $aio-text-on-light;
+}
+
+@mixin aio-button-primary {
+  background-color: $aio-electric-aqua;
+  color: $aio-midnight-teal;
+  border: 2px solid $aio-electric-aqua;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: transparent;
+    color: $aio-electric-aqua;
+  }
+}
+
+@mixin aio-card {
+  background-color: $aio-midnight-teal;
+  border: 1px solid $aio-electric-aqua-20;
+  padding: 1.5rem;
+  border-radius: $aio-border-radius-md;
+}
+
+@mixin aio-gradient-bg {
+  background: $aio-gradient-primary;
+}
+
+// Example Usage
+/*
+.my-component {
+  @include aio-dark-theme;
+  
+  .heading {
+    color: $aio-electric-aqua;
+    font-family: $aio-font-primary-display;
+    font-size: $aio-font-size-h1;
+  }
+  
+  .button {
+    @include aio-button-primary;
+  }
+  
+  .card {
+    @include aio-card;
+  }
+}
+*/

@@ -17,9 +17,9 @@ export const AIOVERSEColors = {
   SOFT_WHITE_RGB: { r: 250, g: 250, b: 250 },
   
   // Opacity Variants
-  electricAquaWithAlpha: (alpha: number) => `rgba(115, 239, 251, ${alpha})`,
-  midnightTealWithAlpha: (alpha: number) => `rgba(0, 36, 40, ${alpha})`,
-  softWhiteWithAlpha: (alpha: number) => `rgba(250, 250, 250, ${alpha})`,
+  electricAquaWithAlpha: (alpha) => `rgba(115, 239, 251, ${alpha})`,
+  midnightTealWithAlpha: (alpha) => `rgba(0, 36, 40, ${alpha})`,
+  softWhiteWithAlpha: (alpha) => `rgba(250, 250, 250, ${alpha})`,
 };
 
 /**

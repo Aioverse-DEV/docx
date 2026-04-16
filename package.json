@@ -1,0 +1,16 @@
+{
+  "name": "aioverse-docs",
+  "version": "1.0.0",
+  "description": "Aioverse Documentation - Blogs, Knowledge Base, Notes, Wiki, and Library",
+  "scripts": {
+    "dev": "mintlify dev",
+    "install-mintlify": "npm install -g mintlify"
+  },
+  "keywords": [
+    "documentation",
+    "mintlify",
+    "docs"
+  ],
+  "author": "Aioverse",
+  "license": "SEE LICENSE IN LICENSE"
+}

@@ -1,10 +1,10 @@
-# GitHub OAuth App Installation
+# GitHub App Installation for OAuth
 
 This repository contains the GitHub App manifest for the Aioverse-DEV organization.
 
 ## About
 
-The OAuth App defined in `.github/app-manifest.yml` (and `.github/app-manifest.json`) provides secure authentication and authorization for accessing the docx repository resources.
+The GitHub App defined in `.github/app-manifest.yml` (and `.github/app-manifest.json`) provides OAuth-based authentication and authorization for accessing the docx repository resources.
 
 ## Installation
 

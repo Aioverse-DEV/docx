@@ -1,13 +1,12 @@
-name: Docx OAuth App
+name: Docx GitHub App
 url: https://github.com/Aioverse-DEV/docx
 description: |
-  OAuth App for Aioverse-DEV organization to manage docx repository access and authentication.
-  This app provides secure access to repository resources for authorized users and applications.
+  GitHub App for Aioverse-DEV organization to manage docx repository access and authentication.
+  This app provides OAuth-based secure access to repository resources for authorized users and applications.
 
 # The app is private by default, set to true if you want it available to other orgs
 public: false
 
-# OAuth callback URL for authentication flow
 default_permissions:
   # Repository permissions
   contents: read

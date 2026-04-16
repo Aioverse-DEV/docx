@@ -1,0 +1,80 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "Aioverse Documentation",
+  "description": "Blogs, Knowledge Base, Notes, Wiki, and Library",
+  "logo": {
+    "dark": "/logo/dark.svg",
+    "light": "/logo/light.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#0D9373",
+    "light": "#07C983",
+    "dark": "#0D9373",
+    "anchors": {
+      "from": "#0D9373",
+      "to": "#07C983"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Support",
+      "url": "mailto:support@aioverse.dev"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "GitHub",
+    "url": "https://github.com/Aioverse-DEV"
+  },
+  "tabs": [
+    {
+      "name": "Knowledge Base",
+      "url": "kb"
+    },
+    {
+      "name": "Blog",
+      "url": "blog"
+    },
+    {
+      "name": "Wiki",
+      "url": "wiki"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/Aioverse-DEV/docx"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Get Started",
+      "pages": [
+        "introduction",
+        "quickstart"
+      ]
+    },
+    {
+      "group": "Knowledge Base",
+      "pages": [
+        "kb/overview"
+      ]
+    },
+    {
+      "group": "Blog",
+      "pages": [
+        "blog/overview"
+      ]
+    },
+    {
+      "group": "Wiki",
+      "pages": [
+        "wiki/overview"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/Aioverse-DEV"
+  }
+}

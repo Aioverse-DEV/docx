@@ -1,0 +1,181 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Custom styles for Aioverse Documentation */
+
+/* Navigation */
+.main-navigation {
+  margin: 20px 0;
+}
+
+.main-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-navigation li {
+  margin: 8px 0;
+}
+
+.main-navigation a {
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+  border-radius: 3px;
+  transition: background-color 0.2s;
+}
+
+.main-navigation a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Post and page lists */
+.post-list, .page-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li, .page-list li {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.post-list li:last-child, .page-list li:last-child {
+  border-bottom: none;
+}
+
+.post-date {
+  color: #828282;
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Categories and tags */
+.post-categories, .post-tags, .category, .tag {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.category, .tag {
+  display: inline-block;
+  background-color: #f0f0f0;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* Code blocks */
+pre {
+  padding: 15px;
+  overflow: auto;
+  font-size: 14px;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border-radius: 6px;
+}
+
+code {
+  padding: 2px 6px;
+  font-size: 90%;
+  background-color: rgba(175, 184, 193, 0.2);
+  border-radius: 3px;
+}
+
+pre code {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Post navigation */
+.post-navigation {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-navigation a {
+  text-decoration: none;
+}
+
+.post-navigation .prev {
+  text-align: left;
+}
+
+.post-navigation .next {
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .post-navigation {
+    flex-direction: column;
+  }
+  
+  .post-navigation .next {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
+
+/* Headers in content */
+.post-content h1, .page-content h1 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.post-content h2, .page-content h2 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.post-content h3, .page-content h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Links */
+a {
+  color: #0366d6;
+}
+
+a:hover {
+  color: #0256c2;
+}
+
+/* Home page styling */
+.home h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e8e8e8;
+}

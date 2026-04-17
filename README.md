@@ -2,6 +2,17 @@
 
 A comprehensive documentation site built with Jekyll, featuring blogs, knowledge base articles, notes, wiki pages, and library documentation.
 
+## 🌐 Domainwide Documentation Hub
+
+Additional domainwide documentation scaffolding is available at:
+
+- [Docs Hub](/docs/README.md)
+- [Wiki (Domain)](/wiki/README.md)
+- [Blog (Domain)](/blogs/README.md)
+- [Library (Domain)](/library/README.md)
+- [Templates](/templates/README.md)
+- [Ingestion Blueprint](/docs/ingestion/library-blueprint.md)
+
 ## 📚 Sections
 
 - **[Blogs](/blogs/)** - Technical blog posts, tutorials, and articles

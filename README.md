@@ -8,7 +8,7 @@ Additional domainwide documentation scaffolding is available at:
 
 - [Docs Hub](/docs/README.md)
 - [Wiki (Domain)](/wiki/README.md)
-- [Blog (Domain)](/blog/README.md)
+- [Blog (Domain)](/blogs/README.md)
 - [Library (Domain)](/library/README.md)
 - [Templates](/templates/README.md)
 - [Ingestion Blueprint](/docs/ingestion/library-blueprint.md)

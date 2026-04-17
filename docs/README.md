@@ -12,6 +12,6 @@
 
 - `/docs` - canonical technical and operational documentation
 - `/wiki` - evergreen knowledge base and decisions
-- `/blog` - dated updates and release narratives
+- `/blogs/` - dated updates and release narratives
 - `/library` - curated references and reusable artifacts
 - `/templates` - standard doc templates

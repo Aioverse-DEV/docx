@@ -18,7 +18,7 @@ Create one domainwide documentation library that can ingest from any source and 
 1. Collect source asset into `library/inbox/`.
 2. Add metadata (domain, owner, source, format, timestamp, tags).
 3. Convert source to canonical markdown where possible.
-4. Store normalized docs under `/docs`, `/wiki`, or `/blog` based on purpose.
+4. Store normalized docs under `/docs`, `/wiki`, or `/blogs/` based on purpose.
 5. Link source artifact and normalized output from `/library` index.
 6. Run review/approval and publish.
 
